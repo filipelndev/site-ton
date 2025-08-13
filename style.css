@@ -3,14 +3,19 @@ body {
     font-family: 'Segoe UI', Arial, sans-serif;
     background: #C8FFC8;
     color: #000000;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-top: 80px; /* espaço para header fixo */
     box-sizing: border-box;
 }
 header {
     background: #00D700;
     color: #fff;
-    padding: 16px 0;
+    padding: 2px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 .container {
     width: 90%;
@@ -33,37 +38,9 @@ nav a {
 nav a:hover {
     color: #003C00;
 }
-.hero {
-    background: linear-gradient(90deg, #00D700 60%, #006E00 100%);
-    color: #fff;
-    padding: 64px 0 48px 0;
-    text-align: left;
-}
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 16px;
-}
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 32px;
-}
-.btn-cta {
-    background: #003C00;
-    color: #fff;
-    padding: 16px 32px;
-    border-radius: 32px;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 1.1rem;
-    transition: background 0.2s;
-}
-.btn-cta:hover {
-    background: #00D700;
-    color: #003C00;
-}
-}
-nav a:hover {
-    color: #222222;
+nav {
+    display: flex;
+    align-items: center;
 }
 .hero {
     background: linear-gradient(90deg, #00D700 20%, #000000 100%);
@@ -80,8 +57,8 @@ nav a:hover {
     margin-bottom: 32px;
 }
 .btn-cta {
-    background: rgb(2, 51, 2);
-    color: #00D700;
+    background: #00D700;
+    color: rgb(2, 51, 2);
     padding: 16px 32px;
     border-radius: 32px;
     font-weight: bold;
